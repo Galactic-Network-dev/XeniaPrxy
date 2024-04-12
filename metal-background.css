@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: 
+        linear-gradient(45deg, #444 25%, transparent 25%, transparent 75%, #444 75%, #444),
+        linear-gradient(45deg, #444 25%, transparent 25%, transparent 75%, #444 75%, #444),
+        #222;
+    background-size: 50px 50px;
+}
