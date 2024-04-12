@@ -22,6 +22,15 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center; /* Center align the content */
+            position: relative; /* Position relative for absolute positioning */
+        }
+
+        #logo {
+            position: absolute;
+            top: 10px; /* Adjust the top position as needed */
+            left: 10px; /* Adjust the left position as needed */
+            width: 100px; /* Adjust the width as needed */
         }
 
         input[type="text"] {
@@ -50,9 +59,10 @@
 <body>
     <!-- Xenia Proxy HTML content here -->
     <div id="search-container">
+        <img id="logo" src="6545ef8e-4ce9-4275-a56d ... b40-removebg-preview.png" alt="Logo"> <!-- Add your logo here -->
         <h1>Xenia Proxy</h1>
         <form id="search-form">
-            <input type="text" id="search-input" placeholder="Enter your url here...">
+            <input type="text" id="search-input" placeholder="Enter your URL here...">
             <input type="submit" value="Search">
         </form>
         <div id="results-container"></div>
@@ -69,3 +79,4 @@
     <script src="proxy.js"></script>
 </body>
 </html>
+
