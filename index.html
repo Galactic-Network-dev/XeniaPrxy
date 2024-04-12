@@ -26,13 +26,6 @@
             position: relative; /* Position relative for absolute positioning */
         }
 
-        #logo {
-            position: absolute;
-            top: 10px; /* Adjust the top position as needed */
-            left: 10px; /* Adjust the left position as needed */
-            width: 100px; /* Adjust the width as needed */
-        }
-
         input[type="text"] {
             padding: 10px;
             font-size: 16px;
@@ -46,20 +39,19 @@
             font-size: 16px;
             border: none;
             border-radius: 5px;
-            background-color: #4CAF50;
+            background-color: silver; /* Change the background color to silver */
             color: white;
             cursor: pointer;
         }
 
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #C0C0C0; /* Change the hover color to a lighter shade of silver */
         }
     </style>
 </head>
 <body>
     <!-- Xenia Proxy HTML content here -->
     <div id="search-container">
-        <img id="logo" src="_6545ef8e-4ce9-4275-a56d-0d969b089b40-removebg-preview.png" alt="Logo"> <!-- Add your logo here -->
         <h1>Xenia Proxy</h1>
         <form id="search-form">
             <input type="text" id="search-input" placeholder="Enter your URL here...">
@@ -78,3 +70,8 @@
             var translatedUrl = "https://translate.google.com/translate?hl=en&sl=auto&tl=en&u=" + encodeURIComponent(url);
             
             // Redirect the user to the translated URL
+            window.location.href = translatedUrl;
+        });
+    </script>
+</body>
+</html>
