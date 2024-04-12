@@ -59,24 +59,27 @@
 <body>
     <!-- Xenia Proxy HTML content here -->
     <div id="search-container">
-        <img id="logo" src="6545ef8e-4ce9-4275-a56d ... b40-removebg-preview.png" alt="Logo"> <!-- Add your logo here -->
+        <img id="logo" src="your-logo.png" alt="Logo"> <!-- Add your logo here -->
         <h1>Xenia Proxy</h1>
         <form id="search-form">
             <input type="text" id="search-input" placeholder="Enter your URL here...">
-            <input type="submit" value="Search">
+            <input type="submit" value="Translate and Go">
         </form>
         <div id="results-container"></div>
     </div>
 
-    <!-- Custom Search Engine -->
-    <div id="search-container">
-        <!-- Custom search engine code -->
-        <script async src="https://cse.google.com/cse.js?cx=50321224bee844598"></script>
-        <div class="gcse-searchbox"></div>
-    </div>
+    <script>
+        document.getElementById("search-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
 
-    <!-- JavaScript code for Xenia Proxy -->
-    <script src="proxy.js"></script>
+            var url = document.getElementById("search-input").value; // Get the URL entered by the user
+
+            // Use Google Translate API to translate the URL
+            var translatedUrl = "https://translate.google.com/translate?hl=en&sl=auto&tl=en&u=" + encodeURIComponent(url);
+            
+            // Redirect the user to the translated URL
+            window.location.href = translatedUrl;
+        });
+    </script>
 </body>
 </html>
-
