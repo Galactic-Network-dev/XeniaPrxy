@@ -4,58 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xenia Proxy</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            background: url('metal_bg.jpg') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #search-container {
-            background-color: rgba(255, 255, 255, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        input[type="text"] {
-            padding: 10px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            width: 300px;
-        }
-
-        input[type="submit"] {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <!-- CSS styles for Xenia Proxy -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <!-- Custom Search Engine -->
     <div id="search-container">
         <h1>Xenia Proxy</h1>
-        <form id="search-form">
-            <input type="text" id="search-input" placeholder="Enter your search query...">
-            <input type="submit" value="Search">
-        </form>
-        <div id="results-container"></div>
+        <!-- Custom search engine code -->
+        <script async src="https://cse.google.com/cse.js?cx=50321224bee844598"></script>
+        <div class="gcse-searchbox"></div>
     </div>
 
+    <!-- JavaScript code for Xenia Proxy -->
     <script src="proxy.js"></script>
 </body>
 </html>
