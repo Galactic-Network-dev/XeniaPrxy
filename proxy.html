@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xenia Proxy</title>
+    <style>
+        /* CSS styles for Xenia Proxy */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('https://jooinn.com/images/metal-texture-88.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #search-container {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center; /* Center align the content */
+            position: relative; /* Position relative for absolute positioning */
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: silver; /* Change the background color to silver */
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #C0C0C0; /* Change the hover color to a lighter shade of silver */
+        }
+    </style>
+</head>
+<body>
+    <!-- Xenia Proxy HTML content here -->
+    <div id="search-container">
+        <h1>Xenia Proxy</h1>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Enter your URL here...">
+            <input type="submit" value="Go">
+        </form>
+        <div id="results-container"></div>
+    </div>
+
+    <script>
+        document.getElementById("search-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var url = document.getElementById("search-input").value; // Get the URL entered by the user
+
+            // Use Google Translate API to translate the URL
+            var translatedUrl = "https://translate.google.com/translate?hl=en&sl=auto&tl=en&u=" + encodeURIComponent(url);
+            
+            // Redirect the user to the translated URL
+            window.location.href = translatedUrl;
+        });
+    </script>
+</body>
+</html>
