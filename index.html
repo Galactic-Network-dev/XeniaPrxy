@@ -4,50 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Menu</title>
-    <style>
-        /* CSS styles for the main menu */
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            background: url('https://jooinn.com/images/metal-texture-88.jpg') no-repeat center center fixed;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #menu {
-            text-align: center;
-        }
-
-        .button {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            background-color: silver;
-            color: white;
-            cursor: pointer;
-            margin: 10px;
-        }
-
-        .button:hover {
-            background-color: #C0C0C0;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="menu">
         <button class="button" onclick="goToProxy()">Proxy</button>
-        <button class="button">Games</button>
-        <button class="button">Apps</button>
-        <button class="button">Settings</button>
+        <button class="button" onclick="goToPage('games.html')">Games</button>
+        <button class="button" onclick="goToPage('apps.html')">Apps</button>
+        <button class="button" onclick="goToSettings()">Settings</button>
     </div>
 
     <script>
         function goToProxy() {
             window.location.href = "proxy.html"; // Redirect to the proxy page
+        }
+
+        function goToPage(page) {
+            window.location.href = page; // Redirect to the specified page
+        }
+
+        function goToSettings() {
+            window.location.href = "settings.html"; // Redirect to the settings page
         }
     </script>
 </body>
