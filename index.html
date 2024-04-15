@@ -7,24 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body style="background-image: url('https://i.ytimg.com/vi/VH1C7xACJt4/maxresdefault.jpg');">
-    <div id="menu">
-        <button class="button" onclick="goToProxy()">Proxy</button>
-        <button class="button" onclick="goToPage('games.html')">Games</button>
-        <button class="button" onclick="goToPage('apps.html')">Apps</button>
-        <button class="button" onclick="goToSettings()">Settings</button>
-    </div>
+    <button class="shining-button" onclick="goToPage('games.html')">Games</button>
+    <button class="menu-button" onclick="goToPage('proxy.html')">Proxy</button>
+    <button class="menu-button" onclick="goToPage('settings.html')">Settings</button>
+    <button class="menu-button" onclick="goToPage('apps.html')">Apps</button>
 
     <script>
-        function goToProxy() {
-            window.location.href = "proxy.html"; // Redirect to the proxy page
-        }
-
         function goToPage(page) {
             window.location.href = page; // Redirect to the specified page
-        }
-
-        function goToSettings() {
-            window.location.href = "settings.html"; // Redirect to the settings page
         }
     </script>
 </body>
