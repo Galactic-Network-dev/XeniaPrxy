@@ -3,17 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games Coming Soon!</title>
+    <title>Games</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Games Page</h1>
+    <h1 style="color: white;">Games Page</h1>
     <div id="games-container">
-        <div class="game">
-            <img src="logo_url_here" alt="Game Logo">
-            <p>Game Name</p>
-        </div>
-        <!-- Add more game entries here -->
+        <!-- Game entries go here -->
     </div>
 
     <!-- Input fields for adding new games -->
@@ -25,31 +21,7 @@
 
     <script>
         function addGame() {
-            var logoUrl = document.getElementById("logoUrl").value;
-            var gameName = document.getElementById("gameName").value;
-
-            if (logoUrl && gameName) {
-                var gamesContainer = document.getElementById("games-container");
-                var gameDiv = document.createElement("div");
-                gameDiv.classList.add("game");
-
-                var logoImg = document.createElement("img");
-                logoImg.src = logoUrl;
-                logoImg.alt = "Game Logo";
-                gameDiv.appendChild(logoImg);
-
-                var gameNameParagraph = document.createElement("p");
-                gameNameParagraph.textContent = gameName;
-                gameDiv.appendChild(gameNameParagraph);
-
-                gamesContainer.appendChild(gameDiv);
-
-                // Clear input fields
-                document.getElementById("logoUrl").value = "";
-                document.getElementById("gameName").value = "";
-            } else {
-                alert("Please enter both logo URL and game name.");
-            }
+            // Function to add a new game entry
         }
     </script>
 </body>
