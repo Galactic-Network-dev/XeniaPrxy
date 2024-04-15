@@ -10,11 +10,7 @@ body {
     align-items: center;
 }
 
-#menu {
-    text-align: center;
-}
-
-.button {
+.shining-button {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
@@ -23,21 +19,20 @@ body {
     color: white;
     cursor: pointer;
     margin: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    animation: shine 3s infinite alternate ease-in-out;
 }
 
-.button:hover {
-    background: linear-gradient(45deg, #d1d1d1, #9c9c9c);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    transform: translateY(-2px);
-}
-
-.button:focus {
-    outline: none;
-}
-
-.button:active {
-    transform: translateY(1px);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+@keyframes shine {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
 }
