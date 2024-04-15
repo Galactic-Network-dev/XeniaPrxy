@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Settings Page</h1>
+    <label for="pageTitle">Change Page Title:</label>
+    <input type="text" id="pageTitle" class="input-field">
+    <button class="button" onclick="changeTitle()">Save</button>
+
+    <script>
+        function changeTitle() {
+            var newTitle = document.getElementById("pageTitle").value;
+            document.title = newTitle; // Change the page title
+        }
+    </script>
+</body>
+</html>
