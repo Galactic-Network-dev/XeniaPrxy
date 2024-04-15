@@ -11,28 +11,35 @@ body {
 }
 
 .shining-button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 20px 40px;
+    font-size: 20px;
+    font-weight: bold;
     border: none;
-    border-radius: 5px;
-    background: linear-gradient(45deg, #9c9c9c, #d1d1d1);
-    color: white;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #afafaf, #e3e3e3);
+    color: #333;
     cursor: pointer;
-    margin: 10px;
+    margin: 20px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     animation: shine 3s infinite alternate ease-in-out;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.shining-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
 }
 
 @keyframes shine {
     0% {
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     }
     50% {
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
     }
     100% {
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     }
 }
