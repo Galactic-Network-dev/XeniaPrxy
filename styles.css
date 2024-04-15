@@ -3,11 +3,11 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background: linear-gradient(135deg, #8e9eab, #eef2f3);
+    background-image: url('https://i.ytimg.com/vi/VH1C7xACJt4/maxresdefault.jpg');
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
 }
 
 #menu {
@@ -19,28 +19,25 @@ body {
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
+    background: linear-gradient(45deg, #9c9c9c, #d1d1d1);
     color: white;
     cursor: pointer;
     margin: 10px;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
 .button:hover {
-    background-color: #45a049;
+    background: linear-gradient(45deg, #d1d1d1, #9c9c9c);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
 }
 
-.input-field {
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    width: 200px;
-}
-
-.button:focus,
-.input-field:focus {
+.button:focus {
     outline: none;
-    border-color: #4CAF50;
-    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+.button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
