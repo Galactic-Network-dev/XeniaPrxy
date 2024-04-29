@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xenia Proxy</title>
+    <title>Edge Circles Proxy</title>
     <style>
-        /* CSS styles for Xenia Proxy */
+        /* CSS styles for Edge Circles Proxy */
         body {
             margin: 0;
             padding: 0;
@@ -50,28 +50,14 @@
     </style>
 </head>
 <body>
-    <!-- Xenia Proxy HTML content here -->
+    <!-- Edge Circles Proxy HTML content here -->
     <div id="search-container">
-        <h1>Xenia Proxy</h1>
-        <form id="search-form">
-            <input type="text" id="search-input" placeholder="Enter your URL here...">
+        <h1>Edge Circles Proxy</h1>
+        <form id="search-form" target="_blank" action="proxypage.html">
+            <input type="text" id="search-input" name="url" placeholder="Enter your URL here...">
             <input type="submit" value="Go">
         </form>
         <div id="results-container"></div>
     </div>
-
-    <script>
-        document.getElementById("search-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            var url = document.getElementById("search-input").value; // Get the URL entered by the user
-
-            // Use Google Translate API to translate the URL
-            var translatedUrl = "https://translate.google.com/translate?hl=en&sl=auto&tl=en&u=" + encodeURIComponent(url);
-            
-            // Redirect the user to the translated URL
-            window.location.href = translatedUrl;
-        });
-    </script>
 </body>
 </html>
